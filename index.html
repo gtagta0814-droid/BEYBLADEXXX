@@ -359,18 +359,19 @@ h1 {
 
 /* 切換按鈕樣式 */
 #scoreModeBtn {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  padding: 10px 16px;
   background: var(--accent);
-  color: white;
+  color: var(--text);
   border: none;
   border-radius: 999px;
-  cursor: pointer;
-  z-index: 1000;
+  padding: 10px 20px;
   font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+  margin-top: 12px;
+}
+#scoreModeBtn:hover {
+  background: #e03030;
 }
 #backBtn {
   position: fixed;
@@ -394,14 +395,13 @@ h1 {
 </head>
 <body>
 
-<button id="scoreModeBtn">計分模式</button>
-
 <div id="tournament">
   <h1>BEYBLADE X 淘汰賽</h1>
   <div class="input-card">
     <div class="input-title">參賽者名單</div>
     <div id="playerList"></div>
     <button id="addPlayer">添加參賽者</button>
+    <button id="scoreModeBtn">計分模式</button>
   </div>
   <div class="mode-selector">
     <button id="modeA" class="mode-btn active">單淘汰賽模式</button>
